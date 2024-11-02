@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title> My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/29e27243c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nav-container-darshan">
+        <div class="navbar-darshan">
+            <img src="./images/logo.png" class="nav-logo" alt="Logo">
+            
+            <!-- Hamburger Icon -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                &#9776;
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="darshan-nav" id="nav-links">
+                <li><a href="#home" onclick="opentab('Home'); toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="opentab('About'); toggleMenu();">About</a></li>
+                <li><a href="#portfolio" onclick="opentab('portfolio'); toggleMenu();">Projects</a></li>
+                <li><a href="#contact" onclick="opentab('Contact'); toggleMenu();">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="intro-container">
+        <div class="intro-content">
+            <img src="images/my.png" alt="Welcome Image" class="intro-image">
+            <p class="intro-text">Great to see you today! <span class="highlight" style="color: #ff004f;">Welcome to my portfolio</span>
+                I'm <span class="highlight" style="color: #ff004f;">Darshan Gowda M</span></p>
+        </div>
+    </div>
+
+
+    <!-- About me section -->
+    <div id="about" style="margin-top: 50px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col2">
+                    <h1 class="subtitle" id="subtitle" style="padding-bottom: 15px;">About Me</h1>
+                    <div class="image-container">
+                        <img id="img2" src="images/photo.jpg" alt="Description of image">
+                    </div>
+                    <p id="info1">I am an enthusiastic engineering student currently pursuing a degree in Information
+                        Science and Engineering at UVCE, Bengaluru, with a strong academic record and a CGPA of 9.72. My
+                        journey in engineering has fueled my passion for technology and innovation, and I am constantly
+                        seeking opportunities to expand my skills and knowledge in this dynamic field.</p>
+
+                    <h2 class="subtitle" id="subtitle1"><br><br>Personal Information</h2>
+                    <p id="info2"><strong>Name:</strong> Darshan Gowda M</p>
+                    <p id="info2"><strong>Email:</strong> darsangowdam2004@gmail.com</p>
+                    <p id="info2"><strong>Date of Birth:</strong>31-08-2004</p>
+                    <p id="info2"><strong>Hobbies:</strong>meditation,playing chess,reading books,etc</p><br><br>
+
+                    <center>
+                        <div class="tab-title-darshan">
+                            <h2 class="skills-heading-darshan"></h2>
+                            <p class="tab-links-darshan active-links-darshan" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links-darshan" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links-darshan" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links-darshan" onclick="opentab('Certifications')">Certifications</p>
+                        </div>
+                    </center>
+
+                    <br><br><br><br>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <h2 class="subtitle" style="font-size: 30px; color: #ff004f; text-align: center;">Soft Skills
+                        </h2>
+                        <div class="soft-skill-container">
+                            <!-- Soft skills -->
+                            <div class="soft-skill">
+                                <img src="images/team.jpg" alt="Teamwork" class="skill-icon">
+                                <span>Teamwork</span>
+                            </div>
+                            <div class="soft-skill">
+                                <img src="images/ps.jpg" alt="Problem Solving" class="skill-icon">
+                                <span>Problem-Solving</span>
+                            </div>
+                            <div class="soft-skill">
+                                <img src="images/creativity.jpg" alt="Creativity" class="skill-icon">
+                                <span>Creativity</span>
+                            </div>
+                            <div class="soft-skill">
+                                <img src="images/time.jpg" alt="Time Management" class="skill-icon">
+                                <span>Time Management</span>
+                            </div>
+                        </div>
+                        <!-- Technical Skills -->
+                        <br><br><br><br>
+                        <h2 class="subtitle" style="font-size: 30px; color: #ff004f; text-align: center;">Technical
+                            Skills</h2>
+                        <div class="skill-container">
+                            <div class="skill-row">
+                                <div class="skill-circle">
+                                    <img src="images/html.png" alt="HTML" class="skill-icon">
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-circle">
+                                    <img src="images/css.png" alt="CSS" class="skill-icon">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill-circle">
+                                    <img src="images/javascript.jpg" alt="JavaScript" class="skill-icon">
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <!-- These skills will be hidden initially -->
+                                <div class="skill-circle hidden">
+                                    <img src="images/nodejs.png" alt="Node JS" class="skill-icon">
+                                    <span>Node JS</span>
+                                </div>
+                                <div class="skill-circle hidden">
+                                    <img src="images/java.png" alt="Java" class="skill-icon">
+                                    <span>Java</span>
+                                </div>
+                                <div class="skill-circle hidden">
+                                    <img src="images/c++.png" alt="C++" class="skill-icon">
+                                    <span>C++</span>
+                                </div>
+                                <div class="skill-circle hidden">
+                                    <img src="images/c.jpg" alt="C" class="skill-icon">
+                                    <span>C</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="showMoreSkills" onclick="toggleSkills()">Show More Skills</button>
+                    </div>
+                    <!-- Experience Section -->
+
+                    <div class="tab-contents" id="Experience">
+                        <br>
+                        <ul>
+                            <li><span>Jan/2024-Jan/2024</span><br>Soft Skills Intern at Infosys BPM Limited</li>
+                            <li><span>Sept/2024-Oct/2024</span><br>AI Manual Tester</li>
+                        </ul>
+                    </div>
+                    <!-- Education section -->
+                    <div class="tab-contents" id="Education">
+                        <br>
+                        <ul>
+                            <li><span>2022-current</span><br>Information Science and Engineering Student in UVCE,
+                                Bengaluru <br>CGPA-9.72</li>
+                            <li><span>2020-2022</span><br>PUC at KMWA Independent PU College <br>Percentage-97%</li>
+                            <li><span>2019-2020</span><br>10th at Mount Senoria School <br>Percentage-96%</li>
+                        </ul>
+                    </div>
+                    <!-- Certifications -->
+                    <div class="tab-contents" id="Certifications">
+                        <br>
+                        <ul>
+                            <li>1.<span>Introduction to Artificial Intelligence </span>-IBM</li>
+                            <li>2.<span>Professional English</span>-Enguru</li>
+                            <li>3.<span>Introduction to Cyber Security</span>-Udemy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- My Works section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titles">My Works</h1>
+            <div class="work-list" id="workList">
+                <div class="work">
+                    <img src="images/cloth_manager.jpg" alt="cloth-manager">
+                    <div class="layer">
+                        <h3>Cloth Manager</h3>
+                        <p>This website keeps track of all the items purchased by an individual</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <a href="https://completerepo.onrender.com/home"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a>
+                            <a href="https://github.com/Darshan-gowda-m/Bit-N-Build-2024-Binary_innovators.git"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="images/taskManager.png" alt="task-manager">
+                    <div class="layer">
+                        <h3>Task Manager</h3>
+                        <p>The full stack website that helps an individual to track his/her tasks.</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <a href="#"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="work ">
+                    <img src="images/portfolio.png" alt="project-6">
+                    <div class="layer">
+                        <h3>Portfolio</h3>
+                        <p>A simple portfolio giving brief description about myself</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <a href="#"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a>
+                            <a href="https://github.com/Darshan-gowda-m/my_portfolio.git"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/weather-api.jpg" alt="weather-api">
+                    <div class="layer">
+                        <h3>Weather API</h3>
+                        <p>Fetches and display weather conditions of various locations and also future predictions.</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <a href="https://darshan-gowda-m.github.io/weather_api/"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a>
+                            <a href="https://github.com/Darshan-gowda-m/weather_api.git"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work hidden">
+                    <img src="images/brickBreaker.jpg" alt="project-4">
+                    <div class="layer">
+                        <h3>Brick Breaker</h3>
+                        <p>A simple fun game with different levels providing a enjoyable Experience</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <!-- <a href="#"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a> -->
+                            <a href="https://github.com/Darshan-gowda-m/brickBreaker.git"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work hidden">
+                    <img src="images/suduko.jpg" alt="project-5">
+                    <div class="layer">
+                        <h3>Suduko</h3>
+                        <p>A game that increases the anayltical skills of an individual</p>
+                        <div style="justify-content: center; padding-right: 50px;">
+                            <a href="https://darshan-gowda-m.github.io/suduko/"><i class="fa-solid fa-link" style="margin-right: 15px;"></i></a>
+                            <a href="https://github.com/Darshan-gowda-m/suduko.git"><i class="fa-brands fa-github fa-2x" style="margin-left: 15px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <button id="showMoreProjects" onclick="toggleProjects()">Show More Projects</button>
+        </div>
+    </div>
+    <!-- contact section -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-titles">Contact Me</h1>
+            <form id="contactForm" name="submit-to-google-sheet" onsubmit="handleSubmit(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="successMessage" style="display: none; color: green; margin-top: 10px;">Your message has been sent
+                successfully!</div><br><br>
+            <div class="contact-details">
+                <h2>Get in Touch</h2>
+                <p><strong>Email:</strong> darsangowdam2004@gmail.com</p>
+                <p><strong>Phone:</strong> 6362437272</p>
+                <div class="social-links" style="text-align: center; margin-top: 10px;">
+                    <a href="https://github.com/Darshan-gowda-m" target="_blank" style="margin-right: 15px;">
+                        <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/darshan-gowda-m-gowda-m-31361b260/" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+                <a href="https://drive.google.com/file/d/1OymEeXobnjT_gWrXIjU7Ab-ksXGyLN0J/view?usp=sharing">
+                <button type="submit" style="margin-top: 10px; " >Check out my Resume</button>
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Darshan Gowda M. All rights reserved.</p>
+           
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            opentab('Skills');
+
+
+            const skillCircles = document.querySelectorAll('.skill-circle');
+            skillCircles.forEach((skillCircle, index) => {
+                if (index > 2) {
+                    skillCircle.classList.add('hidden');
+                }
+            });
+        });
+
+        // Function to open the specified tab
+        function opentab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-contents');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active-tab');
+            });
+
+            const tabLinks = document.querySelectorAll('.tab-links');
+            tabLinks.forEach(link => {
+                link.classList.remove('active-links');
+            });
+
+
+            document.getElementById(tabName).classList.add('active-tab');
+            const activeLink = Array.from(tabLinks).find(link => link.textContent === tabName);
+            activeLink.classList.add('active-links');
+        }
+
+
+
+        function toggleSkills() {
+            const skillCircles = document.querySelectorAll('.skill-circle');
+            const hiddenSkills = document.querySelectorAll('.skill-circle.hidden');
+            const showMoreSkillsButton = document.getElementById('showMoreSkills');
+
+            if (hiddenSkills.length > 0) {
+
+                hiddenSkills.forEach(skill => {
+                    skill.classList.remove('hidden');
+                });
+                showMoreSkillsButton.textContent = 'Show Less Skills';
+            } else {
+
+                skillCircles.forEach((skillCircle, index) => {
+                    if (index > 2) {
+                        skillCircle.classList.add('hidden');
+                    }
+                });
+                showMoreSkillsButton.textContent = 'Show More Skills';
+            }
+        }
+
+        // Toggle functionality for projects
+        function toggleProjects() {
+            const hiddenProjects = document.querySelectorAll('.work.hidden');
+            const allProjects = document.querySelectorAll('.work');
+
+            if (hiddenProjects.length > 0) {
+                hiddenProjects.forEach(project => {
+                    project.classList.remove('hidden');
+                });
+                document.getElementById('showMoreProjects').textContent = 'Show Less Projects';
+            } else {
+                allProjects.forEach((project, index) => {
+                    if (index > 2) {
+                        project.classList.add('hidden');
+                    }
+                });
+                document.getElementById('showMoreProjects').textContent = 'Show More Projects';
+            }
+        }
+        // contact form
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzpuAL4j9EimOD6UYmzRohG4V8Bp78I-jkgd633Mfauk0RR_rbkMOrTVOzJr4EtDwpZ9g/exec';
+const form = document.forms['submit-to-google-sheet'];
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Form validation
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    // Submit to Google Sheet
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            console.log('Success!', response);
+            successMessage.style.display = 'block';
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+});
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+    
+
+    </script>
+
+
+</body>
+
+</html>
